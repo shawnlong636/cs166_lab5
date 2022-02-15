@@ -32,7 +32,7 @@ WHERE C.pid = P.pid AND C.cost < 10;
 -- Query 3: Find the address of the suppliers who 
 -- supply "Fire Hydrant Cap"
 
-SELECT S.sname
+SELECT S.address
 from suppliers S, parts P, catalog C
 where S.sid = C.sid AND P.pid = C.pid 
     AND P.pname = 'Fire Hydrant Cap';
@@ -40,7 +40,7 @@ where S.sid = C.sid AND P.pid = C.pid
 -- Query 4: Find the name of the suppliers who supply
 -- green parts
 
-SELECT S.sname
+SELECT S.address
 FROM suppliers S, catalog C, parts P
 WHERE S.sid = C.sid AND P.pid = C.pid
     AND P.color = 'Green';
